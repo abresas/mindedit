@@ -14,7 +14,23 @@ var MindEditor = React.createClass( {
 			};
 		}
 		else {
-			return { blobs: {}, nextBlobId: 0 }
+			var intro = "Welcome to MindEdit! Click anywhere to start writing.\n\n";
+			if ( typeof( Storage ) !== "undefined" ) {
+				intro += "Your browser supports localStorage. Great!\nYour text will be automatically saved on your browser.\n";
+			}
+			else {
+				intro += "Your browser does not support localStorage.\nYour text will be lost after you reload or leave this page.\n";
+			}
+			return { 
+				blobs: {
+					0: {
+						x: 100,
+						y: 100,
+						text: intro
+					}
+				},
+				nextBlobId: 1
+			}
 		}
 	},
 	componentWillUpdate: function() {
