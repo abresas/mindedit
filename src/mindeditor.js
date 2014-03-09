@@ -23,14 +23,14 @@ var MindEditor = React.createClass( {
 			}
 			return { 
 				blobs: {
-					0: {
-						id: 0,
+					1: {
+						id: 1,
 						x: 100,
 						y: 100,
 						text: intro
 					}
 				},
-				nextBlobId: 1
+				nextBlobId: 2
 			}
 		}
 	},

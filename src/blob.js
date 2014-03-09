@@ -62,7 +62,7 @@ var Blob = React.createClass( {
 			height: areaHeight + 'px'
 		};
 		return (
-			<div className="blob" style={divStyle} onMouseDown={this.props.onDragStart} onMouseUp={this.props.onDragEnd} onClick={this.handleClick}>
+			<div className="blob movable" style={divStyle} onMouseDown={this.props.onDragStart} onMouseUp={this.props.onDragEnd} onClick={this.handleClick}>
 				<textarea style={textareaStyle} onChange={this.props.onTextChange} onFocus={this.props.onStartEditing} onBlur={this.props.onStopEditing} value={this.props.text}></textarea>
 			</div>
 		);
