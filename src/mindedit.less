@@ -1,0 +1,35 @@
+@blob-background: #FAF8F8;
+@edit-font-family: monospace;
+@edit-font-size: 10pt;
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
+
+.blob {
+	position: absolute;
+	padding: 10px;
+
+	textarea {
+		border: 0;
+		font-size: @edit-font-size;
+		font-family: @edit-font-family;
+		outline: none;
+		resize: none;
+	}
+
+	&:hover, &:hover * {
+		background-color: @blob-background;
+	}
+}
+
+.texttest {
+	position: absolute;
+	visibility: hidden;
+	width: auto;
+	height: auto;
+	/* same as textarea */
+	font-size: @edit-font-size;
+	font-family: @edit-font-family;
+}
