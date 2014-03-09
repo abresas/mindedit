@@ -47,6 +47,10 @@ var Blob = React.createClass( {
 
 		return { width: width, height: height };
 	},
+	handleTextClick: function( event ) {
+		// This allows selecting text (otherwise blob moves instead)
+		event.stopPropagation();
+	},
 	render: function() {
 		var divStyle = {
 			left: this.props.pageX,
@@ -63,7 +67,7 @@ var Blob = React.createClass( {
 		};
 		return (
 			<div className="blob movable" style={divStyle} onMouseDown={this.props.onDragStart} onMouseUp={this.props.onDragEnd} onClick={this.handleClick}>
-				<textarea style={textareaStyle} onChange={this.props.onTextChange} onFocus={this.props.onStartEditing} onBlur={this.props.onStopEditing} value={this.props.text}></textarea>
+				<textarea style={textareaStyle} onMouseDown={this.handleTextClick} onChange={this.props.onTextChange} onFocus={this.props.onStartEditing} onBlur={this.props.onStopEditing} value={this.props.text}></textarea>
 			</div>
 		);
 	}
