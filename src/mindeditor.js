@@ -24,6 +24,7 @@ var MindEditor = React.createClass( {
 			return { 
 				blobs: {
 					0: {
+						id: 0,
 						x: 100,
 						y: 100,
 						text: intro
