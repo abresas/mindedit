@@ -12,10 +12,8 @@ WebFont.load( {
 progressBar.tasks( [ 'WebFont.fontactive.Cousine', 'MindEditor.load', 'Blob.load' ] );
 
 progressBar.onFinish( function() {
-	/*
 	React.renderComponent(
 		<MindEditor />,
 		document.body
 	);
-	*/
 } );
