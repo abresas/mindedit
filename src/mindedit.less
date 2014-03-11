@@ -1,10 +1,37 @@
-@blob-background: #FAF8F8;
-@edit-font-family: monospace;
+@background: #F5F6F6;
+@blob-hover-background: #DDD2CC;
+@edit-font-family: 'Cousine', sans-serif;
 @edit-font-size: 10pt;
+@progressbar-width: 200px;
+@progressbar-height: 20px;
+
+.screen-center( @width, @height ) {
+	width: @width;
+	height: @height;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -@width / 2;
+	margin-top: -@height / 2;
+}
 
 html, body {
 	padding: 0;
 	margin: 0;
+	background-color: @background;
+}
+
+#progressbar {
+	background-color: @background;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	.screen-center( @progressbar-width, @progressbar-height );
+
+	#progress {
+		width: 0px;
+		height: 20px;
+		background-color: @blob-hover-background;
+	}
 }
 
 .blob {
@@ -17,10 +44,12 @@ html, body {
 		font-family: @edit-font-family;
 		outline: none;
 		resize: none;
+		color: #424242;
+		background-color: @background;
 	}
 
 	&:hover, &:hover * {
-		background-color: @blob-background;
+		background-color: @blob-hover-background;
 	}
 }
 

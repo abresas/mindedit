@@ -58,8 +58,9 @@ var Blob = React.createClass( {
 		};
 		var text = this.props.text;
 		var textSize = this.measureText( text );
-		var areaWidth = Math.max( textSize.width + 20, 100 );
-		var areaHeight = Math.max( textSize.height + 5, 16 );
+		var areaWidth = Math.max( textSize.width + 30, 100 );
+		var areaHeight = Math.max( textSize.height + 6, 16 );
+		console.log( 'render', text, textSize, areaWidth, areaHeight );
 
 		var textareaStyle = {
 			width: areaWidth + 'px',
@@ -72,3 +73,5 @@ var Blob = React.createClass( {
 		);
 	}
 } );
+
+progressBar.completed( 'Blob.load' );

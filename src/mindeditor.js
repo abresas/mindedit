@@ -123,3 +123,5 @@ var MindEditor = React.createClass( {
 		);
 	}
 } );
+
+progressBar.completed( 'MindEditor.load' );
