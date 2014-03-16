@@ -103,8 +103,8 @@ var MindEditor = React.createClass( {
 	},
 	render: function() {
 		var divStyle = {
-			width: document.body.scrollWidth,
-			height: document.body.scrollHeight
+			width: screen.width,
+			height: screen.height
 		};
 		var blobs = {};
 		for ( var i in this.state.blobs ) {
